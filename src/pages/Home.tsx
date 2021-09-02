@@ -12,7 +12,7 @@ import  Typography  from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   header: {
-    marginTop: '5vh',
+    marginTop: '15vh',
     marginLeft: '-12vw'
   },
   list: {
