@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PersonDetails from './pages/Person.Details';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import { makeStyles } from '@material-ui/styles';
+import clsx from 'clsx';
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+});
+const App:React.FC = () => {
+  const classes = useStyles();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar>
+       <Toolbar color = "primary"/>
+      </AppBar>
+      <div className = {clsx(classes.root)}>
+      <Switch>
+          <Route exact path = "/"  component = {Home}/>
+          <Route path = "/person/:name" component = {PersonDetails}/>
+        </Switch>
+      </div>
     </div>
   );
 }
