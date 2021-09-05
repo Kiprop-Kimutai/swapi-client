@@ -21,11 +21,12 @@ const useStyles = makeStyles({
     position: 'relative'
   },
   listBigScreen: {
-    marginLeft: '40%',
-    marginRight: '30%',
+    margin: 'auto',
+    width: '50%'
   },
   paginationbigScreen: {
-    left: '35vw'
+    margin: 'auto',
+    width: '50%'
   }
 });
 export const GET_PEOPLE = gql`
