@@ -2,11 +2,10 @@ import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import PersonDetails from './pages/Person.Details';
+import PersonDetails from './pages/Personal.Details';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
 const useStyles = makeStyles({
   root: {
     display: 'flex',
@@ -20,7 +19,7 @@ const App:React.FC = () => {
       <AppBar>
        <Toolbar color = "primary"/>
       </AppBar>
-      <div className = {clsx(classes.root)}>
+      <div className = {classes.root}>
       <Switch>
           <Route exact path = "/"  component = {Home}/>
           <Route path = "/person/:name" component = {PersonDetails}/>
