@@ -26,7 +26,8 @@ describe(`People's Page`, () => {
                             Pagination: {
                                 nextPage: 2,
                                 hasMore: true,
-                                previousPage: null
+                                previousPage: null,
+                                pageCount: 9
                             }
                         }
                     }
@@ -47,7 +48,8 @@ describe(`People's Page`, () => {
                             Pagination: {
                                 nextPage: 2,
                                 hasMore: true,
-                                previousPage: null
+                                previousPage: null,
+                                pageCount: 9
                             }
                         }
                     }
