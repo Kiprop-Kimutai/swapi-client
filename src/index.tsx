@@ -14,7 +14,6 @@ const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
           People: {
             keyArgs: false,
             merge(existing , incoming) {
-              console.log(incoming);
               let People: Reference[] = [];
               if(existing && existing.People) {
                 // People = People.concat(existing.People)
@@ -30,6 +29,7 @@ const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
     }
   }),
   uri: 'https://4t6zi.sse.codesandbox.io/',
+  // uri: 'http://localhost:3500/'
 });
 ReactDOM.render(
   <React.StrictMode>
