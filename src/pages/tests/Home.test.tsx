@@ -2,7 +2,7 @@ import React from 'react';
 import { InMemoryCache } from '@apollo/client';
 import { renderApollo } from './test-utils';
 import { cleanup, waitFor, screen, render } from '@testing-library/react';
-import Home, {GET_PEOPLE} from '../pages/Home';
+import Home, {GET_PEOPLE} from '../Home';
 import { MockedProvider } from '@apollo/client/testing';
 const mockPeople = {
     name: "R2-D2",
