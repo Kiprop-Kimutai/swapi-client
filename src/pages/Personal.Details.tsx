@@ -28,6 +28,7 @@ const useStyles = makeStyles({
         width: '50%',
         margin: 'auto',
         marginTop: '10vh',
+        textAlign: 'center'
     },
     cardSmallScreen: {
         width: '100%',
@@ -41,8 +42,13 @@ const useStyles = makeStyles({
         textTransform: 'none'
     },
     details: {
-        backgroundColor: 'lightgray',
-        wordWrap: 'break-word'
+        /*backgroundColor: 'lightgray',*/
+        wordWrap: 'break-word',
+        textAlign: 'left'
+    },
+    particular : {
+        fontSize: 'smaller',
+        marginLeft: '5%'
     }
 })
 const PersonDetails:React.FC = () => {
@@ -64,37 +70,22 @@ const PersonDetails:React.FC = () => {
     return data.Person.length  ?  (
         <div>
             <Card className = {clsx(classes.card, {[classes.cardSmallScreen]: smallScreen})}>
-                <Typography variant = "h4">Personal Details</Typography>
+                <Typography variant = "h3">Personal Details</Typography>
                 <CardContent>
-                    <Typography variant = "h3" className = {classes.label}>
-                        Name
+                    <Typography variant = "h4" className = {classes.details}>
+                        Name: <span className = {classes.particular}>{data.Person[0].name}</span>
                     </Typography>
                     <Typography variant = "h4" className = {classes.details}>
-                        {data.Person[0].name}
-                    </Typography>
-                    <Typography variant = "h3" className = {classes.label}>
-                        Height
+                        Height: <span className = {classes.particular}>{data.Person[0].height}</span>
                     </Typography>
                     <Typography variant = "h4" className = {classes.details}>
-                        {data.Person[0].height}
-                    </Typography>
-                    <Typography variant = "h3" className = {classes.label}>
-                        Mass
+                        Mass: <span className = {classes.particular}>{data.Person[0].mass}</span>
                     </Typography>
                     <Typography variant = "h4" className = {classes.details}>
-                        {data.Person[0].mass}
-                    </Typography>
-                    <Typography variant = "h3" className = {classes.label}>
-                        Gender
+                        Gender: <span className = {classes.particular}>{data.Person[0].gender}</span>
                     </Typography>
                     <Typography variant = "h4" className = {classes.details}>
-                        {data.Person[0].gender}
-                    </Typography>
-                    <Typography variant = "h3" className = {classes.label}>
-                        HomeWorld
-                    </Typography>
-                    <Typography variant = "h4" className = {classes.details}>
-                        {data.Person[0].homeworld}
+                        HomeWorld: <span className = {classes.particular}>{data.Person[0].homeworld}</span>
                     </Typography>
                 </CardContent>
                 <CardActions>
