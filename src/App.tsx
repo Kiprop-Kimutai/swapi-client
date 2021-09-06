@@ -5,6 +5,7 @@ import PersonDetails from './pages/Personal.Details';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/styles';
+import './App.css';
 const useStyles = makeStyles({
   root: {
     display: 'flex',
