@@ -59,7 +59,8 @@ const Home:React.FC = () => {
     });
     if(loading) return <p>loading....</p>
     if(error) return <p>`Error  ${error.message}`</p>
-    function navigateToPerson(name: string) {
+
+    const navigateToPerson = (name: string) => {
       history.push(`/person/${name}`)
     }
     return (
@@ -73,11 +74,6 @@ const Home:React.FC = () => {
         ))
         }
         </div>
-        {/*{data.People.Pagination.hasMore ? <button onClick = {() => fetchMore({
-          variables: {
-            peoplePageNumber: data.People.Pagination.nextPage
-          }
-        })}>Fetch more</button> : null}*/}
         {
           <Pagination onChange = {(event, page) => fetchMore({
             variables: {
