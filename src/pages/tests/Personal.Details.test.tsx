@@ -26,7 +26,7 @@ describe('Person page', () => {
             }
         ];
         const { getByText } = await renderApollo(
-        <MemoryRouter initialEntries = {["/person","/person/Luke Skywalker"]} initialIndex  = {2}>
+        <MemoryRouter initialEntries = {["/person","/person/Luke Skywalker"]} initialIndex  = {1}>
             <Route component = {PersonDetails} path = "/person/:name"/>
         </MemoryRouter>,
         {mocks, resolvers: {}})
