@@ -28,8 +28,7 @@ const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
       }
     }
   }),
-  uri: 'https://4t6zi.sse.codesandbox.io/',
-  // uri: 'http://localhost:3500/'
+  uri: 'https://4t6zi.sse.codesandbox.io/'
 });
 ReactDOM.render(
   <React.StrictMode>
