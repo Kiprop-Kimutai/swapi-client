@@ -41,7 +41,7 @@ const useStyles = makeStyles({
         textTransform: 'none'
     },
     details: {
-        backgroundColor: 'silver',
+        backgroundColor: 'lightgray',
         wordWrap: 'break-word'
     }
 })
